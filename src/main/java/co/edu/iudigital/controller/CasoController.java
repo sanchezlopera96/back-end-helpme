@@ -60,7 +60,7 @@ public class CasoController {
 				@RequestBody CasoDTO casoDTO
 			) {
 		try {
-			return new ResponseEntity(
+			return new ResponseEntity<CasoDTO>(
 					casoService.save(casoDTO),
 					HttpStatus.CREATED
 			);
